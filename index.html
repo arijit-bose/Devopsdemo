@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbf8f1">
+  <title>Olive & Ember — Feel-good food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Olive and Ember home">
+      <span class="brand-mark">O<span>&</span>E</span>
+      <span class="brand-name">olive <span>&</span> ember</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#menu">Our menu</a>
+      <a href="#story">Our story</a>
+      <a href="#visit">Find us</a>
+    </nav>
+
+    <a class="basket-button" href="#menu" aria-label="Your basket">
+      Basket <span class="basket-count" aria-live="polite">0</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> GOOD FOOD, GOOD MOOD</p>
+        <h1>A little more<br>joy on your <em>plate.</em></h1>
+        <p class="hero-description">
+          Seasonal ingredients, big-hearted cooking, and the kind of food
+          that makes you want to stay a little longer.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">Explore the menu <span>↗</span></a>
+          <a class="text-link" href="#story">Get to know us <span>→</span></a>
+        </div>
+        <div class="hero-note">
+          <span class="note-star">✳</span>
+          Made with love, served with a smile.
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of a colorful meal">
+        <div class="art-sun"></div>
+        <div class="art-label">FRESH<br>& FEEL-GOOD</div>
+        <div class="plate">
+          <div class="plate-inner">
+            <span class="food food-tomato">🍅</span>
+            <span class="food food-leaf">🥬</span>
+            <span class="food food-avocado">🥑</span>
+            <span class="food food-bread">🥖</span>
+            <span class="food food-lemon">🍋</span>
+            <span class="food food-herb">🌿</span>
+          </div>
+        </div>
+        <span class="sparkle sparkle-one">✳</span>
+        <span class="sparkle sparkle-two">✦</span>
+        <div class="art-caption">A little sunshine<br>in every bite.</div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> FROM OUR KITCHEN</p>
+          <h2>Made for <em>the moment.</em></h2>
+        </div>
+        <p class="section-intro">Good ingredients, no fuss.<br>Pick your kind of delicious.</p>
+      </div>
+
+      <div class="menu-toolbar">
+        <div class="filters" role="group" aria-label="Filter menu items">
+          <button class="filter-button active" data-filter="all">All the good stuff</button>
+          <button class="filter-button" data-filter="bowls">Bowls</button>
+          <button class="filter-button" data-filter="mains">Mains</button>
+          <button class="filter-button" data-filter="sweet">Something sweet</button>
+        </div>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="menu-search" type="search" placeholder="Find a favorite..." aria-label="Search the menu">
+        </label>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card" data-category="bowls" data-name="sunshine grain bowl">
+          <div class="dish-art dish-green">
+            <span class="dish-emoji">🥗</span>
+            <span class="dish-tag">GUEST FAVORITE</span>
+          </div>
+          <div class="dish-info">
+            <div><h3>Sunshine grain bowl</h3><p>Herby grains, avocado, crunchy greens</p></div>
+            <span class="price">$14</span>
+          </div>
+          <button class="add-button" aria-label="Add Sunshine grain bowl to basket">+</button>
+        </article>
+
+        <article class="menu-card" data-category="mains" data-name="tomato toast">
+          <div class="dish-art dish-orange">
+            <span class="dish-emoji">🍞</span>
+            <span class="dish-decoration">✳</span>
+          </div>
+          <div class="dish-info">
+            <div><h3>Tomato toast</h3><p>Whipped ricotta, ripe tomato, basil</p></div>
+            <span class="price">$12</span>
+          </div>
+          <button class="add-button" aria-label="Add Tomato toast to basket">+</button>
+        </article>
+
+        <article class="menu-card" data-category="bowls" data-name="green goddess bowl">
+          <div class="dish-art dish-lilac">
+            <span class="dish-emoji">🥑</span>
+            <span class="dish-decoration">✦</span>
+          </div>
+          <div class="dish-info">
+            <div><h3>Green goddess bowl</h3><p>Avocado, cucumber, lemony tahini</p></div>
+            <span class="price">$15</span>
+          </div>
+          <button class="add-button" aria-label="Add Green goddess bowl to basket">+</button>
+        </article>
+
+        <article class="menu-card" data-category="sweet" data-name="little lemon cake">
+          <div class="dish-art dish-yellow">
+            <span class="dish-emoji">🍋</span>
+            <span class="dish-decoration">✳</span>
+          </div>
+          <div class="dish-info">
+            <div><h3>Little lemon cake</h3><p>Olive oil cake, citrus glaze</p></div>
+            <span class="price">$8</span>
+          </div>
+          <button class="add-button" aria-label="Add Little lemon cake to basket">+</button>
+        </article>
+      </div>
+      <p class="empty-message" hidden>No dishes found. Try another search.</p>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-mark">✳</div>
+      <div>
+        <p class="eyebrow">A TABLE FOR EVERYONE</p>
+        <h2>Good food tastes<br>better <em>together.</em></h2>
+      </div>
+      <p class="story-copy">
+        We believe a meal can turn an ordinary day into a lovely one.
+        So we cook with the seasons, make room at the table, and always
+        save you the sunny seat.
+      </p>
+      <a class="button button-light" href="#visit">Come say hello <span>↗</span></a>
+    </section>
+
+    <section class="visit-section" id="visit">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR TABLE IS WAITING</p>
+        <h2>Drop by for<br><em>a little good.</em></h2>
+      </div>
+      <div class="visit-details">
+        <p><strong>Find us</strong><br>12 Garden Lane, Somewhere Lovely</p>
+        <p><strong>Come on in</strong><br>Every day, 9am – 5pm</p>
+        <a class="text-link" href="mailto:hello@oliveandember.example">Say hello by email <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#">
+      <span class="brand-mark">O<span>&</span>E</span>
+      <span class="brand-name">olive <span>&</span> ember</span>
+    </a>
+    <p>Good food. Good people. Good days.</p>
+    <span class="copyright">© 2025 Olive & Ember</span>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
